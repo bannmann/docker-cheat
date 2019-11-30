@@ -1,0 +1,10 @@
+editor: vim
+colorize: true
+style: monokai
+formatter: terminal16m
+cheatpaths:
+  - name: community
+    path: /usr/local/share/cheat/community
+    tags: [ community ]
+    readonly: true
+
