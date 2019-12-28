@@ -1,6 +1,6 @@
 FROM alpine:3.10.3@sha256:e4355b66995c96b4b468159fc5c7e3540fcef961189ca13fee877798649f531a AS build
 
-ARG CHEAT_VERSION=3.2.1
+ARG CHEAT_VERSION=3.2.2
 RUN apk add curl \
     && curl \
         -L \
