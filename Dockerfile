@@ -1,11 +1,12 @@
 FROM alpine:3.10.3@sha256:e4355b66995c96b4b468159fc5c7e3540fcef961189ca13fee877798649f531a AS build
 
-ARG CHEAT_VERSION=3.2.2
-RUN apk add curl \
+ARG CHEAT_VERSION=4.0.2
+RUN apk add curl gzip \
     && curl \
         -L \
-        https://github.com/cheat/cheat/releases/download/$CHEAT_VERSION/cheat-linux-amd64 \
-        -o cheat \
+        https://github.com/cheat/cheat/releases/download/$CHEAT_VERSION/cheat-linux-amd64.gz \
+        -o cheat.gz \
+    && gunzip cheat \
     && chmod a+x cheat
 
 FROM scratch
