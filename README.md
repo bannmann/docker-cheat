@@ -34,10 +34,10 @@ errors.
 
 Fine print
 ----------
-- Although the `latest` tag is built for each new commit on the `master` branch, new versions of the `cheat` binary and
-  cheat sheets are not picked up automatically yet. Instead, every once in a while, the respective definitions
-  (`Dockerfile` and the `cheatsheets` submodule) will be updated with a manual commit. This will probably be automated
-  at some point.
+- Although the [`latest` tag on Docker Hub](https://hub.docker.com/r/bannmann/docker-cheat/tags) is rebuilt for each
+  new commit on the `master` branch, new versions of the `cheat` binary and cheat sheets are not picked up
+  automatically yet. Instead, every once in a while, the respective definitions (`Dockerfile` and the `cheatsheets`
+  submodule) will be updated with a manual commit. This will probably be automated at some point.
 - `cheat` configuration settings are currently [hard-coded](src/conf.yml) in the container.
 - Custom cheat sheets, including writable ones, are not supported yet. However, this could be changed easily by adding a
   container directory to the `conf.yml` which can then be mapped to a host directory by the user.
