@@ -2,6 +2,8 @@ editor: unsupported
 colorize: true
 style: monokai
 formatter: terminal16m
+pager: null
+
 cheatpaths:
   - name: community
     path: /usr/local/share/cheat/community
