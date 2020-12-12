@@ -50,6 +50,7 @@ alias cheat='docker run -v ~/.cheat:/v/personal:ro -v $(pwd):/v/workdir:ro --rm 
 
 Limitations
 -----------
+- Editing cheatsheets is not supported as the docker image intentionally does not include an editor.
 - `cheat` configuration settings are currently [hard-coded](src/conf.yml) inside the container.
 - Although the [`latest` tag on Docker Hub](https://hub.docker.com/r/bannmann/docker-cheat/tags) is rebuilt for each
   new commit on the `master` branch, new versions of the `cheat` binary and cheatsheets are not picked up

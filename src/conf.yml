@@ -1,4 +1,4 @@
-editor: vim
+editor: unsupported
 colorize: true
 style: monokai
 formatter: terminal16m
