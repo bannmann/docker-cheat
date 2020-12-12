@@ -7,4 +7,7 @@ cheatpaths:
     path: /usr/local/share/cheat/community
     tags: [ community ]
     readonly: true
-
+  - name: personal
+    path: /v/personal
+    tags: [ personal ]
+    readonly: true

@@ -9,11 +9,17 @@ RUN apk add curl gzip \
     && gunzip cheat \
     && chmod a+x cheat
 
+RUN mkdir --parents /v/workdir /v/personal
+
 FROM scratch
 
+COPY --from=build v/ /v/
 COPY --from=build cheat /usr/local/bin/cheat
 COPY src/conf.yml /usr/local/etc/cheat/conf.yml
 COPY cheatsheets/ /usr/local/share/cheat/community/
 
 ENV CHEAT_CONFIG_PATH="/usr/local/etc/cheat/conf.yml"
+
+WORKDIR /v/workdir
+
 ENTRYPOINT ["/usr/local/bin/cheat"]
