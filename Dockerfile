@@ -9,13 +9,14 @@ RUN apk add curl gzip \
     && gunzip cheat \
     && chmod a+x cheat
 
-RUN mkdir --parents /v/workdir /v/personal
+RUN mkdir --parents /v/workdir /v/personal /usr/local/share/cheat/builtin
 
 FROM scratch
 
 COPY --from=build v/ /v/
 COPY --from=build cheat /usr/local/bin/cheat
 COPY src/conf.yml /usr/local/etc/cheat/conf.yml
+COPY src/docker-cheat /usr/local/share/cheat/builtin/
 COPY cheatsheets/ /usr/local/share/cheat/community/
 
 ENV CHEAT_CONFIG_PATH="/usr/local/etc/cheat/conf.yml"

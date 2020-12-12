@@ -48,6 +48,12 @@ alias cheat='docker run -v ~/.cheat:/v/personal:ro -v $(pwd):/v/workdir:ro --rm 
 ```
 
 
+Built-in cheatsheet
+-------------------
+
+The docker image includes a [built-in cheatsheet](src/docker-cheat) that can be displayed via `cheat docker-cheat`.
+
+
 Limitations
 -----------
 - Editing cheatsheets is not supported as the docker image intentionally does not include an editor.

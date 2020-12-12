@@ -1,0 +1,8 @@
+# Update the docker-cheat image
+docker pull bannmann/docker-cheat
+
+# Install a simple docker-cheat alias
+alias cheat='docker run --rm bannmann/docker-cheat'
+
+# Install a docker-cheat alias with custom cheatsheet support
+alias cheat='docker run -v ~/.cheat:/v/personal:ro -v $(pwd):/v/workdir:ro --rm bannmann/docker-cheat'
